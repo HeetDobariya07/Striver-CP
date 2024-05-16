@@ -1,29 +1,27 @@
-#include <bits/stdc++.h>
+# include <bits/stdc++.h>
 using namespace std;
 
 int main()
 {
-    int n,i,j;
-    cin>>n;
-    vector<int>v;
-    int bsev=0;
-    int bfr=0;
-
-    while(n>=0)
+    long long n;
+    cin >> n;
+    int a=0, b=0;
+    while(n>0)
     {
-        if(n%7==0)
+        if (n%7 == 0)
         {
-            bsev=n/7;
+            b = n/7;
             n=0;
             break;
         }
-        bfr++;
-        n=n-4;
+        n -= 4;
+        a++;
     }
     if(n==0)
     {
-        while(bfr--) cout<<"4";
-        while(bsev--) cout<<"7";
+        while(a--) cout<<4;
+        while(b--) cout<<7;
     }
-    else cout<<"-1"<<endl;
+    else
+        cout << "-1" << endl;
 }
